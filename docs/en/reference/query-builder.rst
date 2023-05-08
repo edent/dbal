@@ -27,9 +27,9 @@ All other methods cannot distinguish between user- and developer input
 and are therefore subject to the possibility of SQL injection.
 
 To safely work with the QueryBuilder you should **NEVER** pass user
-input to any of the methods of the QueryBuilder and use the placeholder
+input directly into any of the methods of the QueryBuilder. Instead use the placeholder
 ``?`` or ``:name`` syntax in combination with
-``$queryBuilder->setParameter($placeholder, $value)`` instead:
+``$queryBuilder->setParameter($placeholder, $value)``:
 
 .. code-block:: php
 
